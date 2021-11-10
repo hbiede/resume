@@ -1,0 +1,207 @@
+\documentclass{resume-openfont}
+
+\pagestyle{fancy}
+\resetHeaderAndFooter
+
+%--------------------------------------------------------------
+% Convenience command - make it easy to fill template
+
+% Create job position command. Parameters: company, position, location, when
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create job position command. Parameters: company, position, location, when, URL
+\newcommand{\resumeHeadingWithURL}[5]{\runsubsection{\href{#5}{\uppercase{#1}}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+
+% Create education heading. Parameters: Degree, university, location, when
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
+% Create education heading. Parameters: Degree, specialization/minor, university, location, when
+\newcommand{\educationHeadingWithSpecialization}[5]{\runsubsection{#1}\descript{ | #2}\hspace*{\fill}  \location{#4 | #5}\\
+\descript{#3}\fakeNewLine}
+
+% Create project heading. Parameters: Name, link, Tech stack
+\newcommand{\projectHeading}[3]{\Project{#1}{#2}
+\descript{#3}\\}
+
+\newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
+\descript{#3 | #4}\\}
+
+% Parameters: courses
+\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+
+% Parameters: courses
+\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+ 
+%--------------------------------------------------------------
+\begin{document}
+
+%--------------------------------------------------------------
+%     Profile
+%--------------------------------------------------------------
+\newcommand{\yourName}{Hundter Biede}
+% How you want it to show up on the resume
+\newcommand{\yourWebsite}{hbiede.com}
+% vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
+\newcommand{\yourWebsiteLink}{https://hbiede.com}
+\newcommand{\yourEmail}{hbiede@gmail.com}
+\newcommand{\yourPhone}{402-705-8701}
+\newcommand{\githubUserName}{hbiede}
+\newcommand{\linkedInUserName}{hbiede}
+
+% An alternate profile section 
+\alignProfileTable
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+    \ralewayBold{\href{\yourWebsiteLink}{\huge \yourName}} & 
+    Email : \href{mailto:\yourEmail}{\yourEmail}
+    \\
+    \href{https://github.com/\githubUserName}{GitHub://\githubUserName} & 
+    Mobile : \href{tel:\yourPhone}{\yourPhone}
+    \\
+    \href{https://www.linkedin.com/in/\linkedInUserName}{LinkedIn://\linkedInUserName} & Website : \href{\yourWebsiteLink}{\yourWebsite}
+    \\
+\end{tabular*}
+
+% \begin{center}
+%     \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
+%     \small \faEnvelope~\href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \faPhone~\yourPhone $|$ 
+%     % \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+%     \faGithub~\href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+%     $|$ \faGlobe~\href{\yourWebsiteLink}{\underline{\yourWebsite}}
+% \end{center}
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{MS Computer Science}{University of Nebraska-Lincoln}{Lincoln, NE}{Graduating May 2023}
+
+\educationHeadingWithSpecialization{Masters of Engineering Management}{Business Administration Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{Graduating May 2023}
+
+\educationHeadingWithSpecialization{BSc. Computer Science}{Mathematics Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2021}
+
+
+% \teacherAssistant{World Wide Web Information Systems Development}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Experience
+%--------------------------------------------------------------
+\section{Work Experience}
+\resumeHeadingWithURL{DMSi}{Software Engineer}{Omaha, NE}{May 2020 – Present}{https://www.dmsi.com}
+\begin{bullets}
+    \item Implemented two released modules in \textbf{React Native} to allow
+      warehouse workers to quickly handle shipments.
+    \item Performed code reviews for coworkers, proposing potential algorithmic
+      alternatives to improve app performance.
+    \item Facilitated \textbf{TypeScript} implementation and conversion for five
+      packages and a mobile app.
+    \item Conducted workshops on \textbf{TypeScript} and \textbf{Coding for
+      Accessibility} to 50+ coworkers during an internal conference.
+    \item Interacted with 10+ team members during \textbf{Agile} meetings to inform
+      product decision with respect to technical restrictions and requirements as well as
+      user experience flows.
+    \item Designed and implemented complex components for the shared design system
+      to provide a consistent feel across the suite of apps during advanced user
+      interactions.
+\end{bullets}
+\sectionsep
+
+\resumeHeadingWithURL{University of Nebraska-Lincoln}{Senior Leader}{Lincoln, NE}{May 2020 - May 2021}{https://computing.unl.edu}
+\begin{bullets}
+    \item Served on a committee that oversaw over 60 teaching assistants (TAs) for
+      four introductory computer science courses, ensuring quality resources were
+      available to all students.
+    \item Created technical interview materials in \textbf{Java} and \textbf{Matlab}
+      and provided feedback on materials written by coworkers in \textbf{C} and
+      \textbf{Python}.
+    \item Interviewed potential TAs and reviewed candidates as a member of the
+      hiring subcommittee.
+    \item Taught workshops on \textbf{debugging} and \textbf{pedagogy}, impacting the
+      teaching strategies used with hundreds of students.
+\end{bullets}
+\sectionsep
+
+% \resumeHeading{University of Nebraska-Lincoln}{Course Leader}{Lincoln, NE}{Jan 2019 - May 2020}
+% \begin{bullets}
+%     \item Taught lab sessions and conducted office hours, assisting over 100 students
+%       with programming assignments in \textbf{Java} and \textbf{C}.
+%     \item Oversaw groups of teaching assistants (TAs), serving as their direct manager.
+%     \item Conducted quality assurance checks on the grading performed by my assigned
+%       TAs to ensure internal consistency across the course.
+% \end{bullets}
+% \sectionsep
+
+\resumeHeadingWithURL{FBLA}{Test Writer}{Ralston, VA}{Aug 2019 - Present}{https://fbla.org}
+\begin{bullets}
+    \item Authored 10 objective tests for use at state and national competitions
+      with thousands of participants.
+    \item Outlined task guidelines for 3 test events, giving guidance to future
+      test writers and ensuring consistency in yearly performances.
+    \item Served as an event judge for 8 performance events for both high school
+      and college events.
+\end{bullets}
+\sectionsep
+
+%--------------------------------------------------------------
+%     Projects
+%--------------------------------------------------------------
+\section{Projects}
+
+\projectHeading{What's Next}{https://github.com/hbiede/whats-next}{Swift, SwiftUI, Accessibility, iOS}
+\begin{bullets}
+  \item Gives users the ability to track movie, book, and TV show recommendations
+    from friends and easily get a random recommendation for the next piece of
+    media to enjoy.
+\end{bullets}
+\sectionsep
+
+% \projectHeading{Counter}{https://github.com/hbiede/counter}{React Native, TypeScript,
+% Expo, Accessibility, iOS, Android}
+% A mobile app that gives users easy access to multiple counters, doing away with the need
+% for handheld tally counters.\\
+% \sectionsep
+
+\projectHeading{Voter Token Generator and Parser}{https://github.com/hbiede/Voter-Tokens}{Ruby, LaTeX, RegEx, Scripting}
+\begin{bullets}
+  \item Coded to create voter authentication tokens to permit a high school
+    organization to conduct yearly officer elections via an online form while
+    providing election security.
+  \item Reduced turnaround time by over 75\% when compared to
+    the previous paper and pencil method.
+  \item Facilitated over 800 votes for 2 annual state elections, with 0 reports of
+    illegitimate votes.
+\end{bullets}
+\sectionsep
+
+
+% Example using bullets and dates 
+% \projectHeadingWithDate{Hogwart\textquotesingle{}s Library Management System}{https://github.com/Aarif123456/hogwartslibrary}{PHP, JavaScript, HTML, CSS, MySQL}{Aug 2019}
+% \begin{bullets}
+    % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
+% \end{bullets}
+% \sectionsep
+  
+
+%--------------------------------------------------------------
+%     Skills
+%--------------------------------------------------------------
+\section{Skills}
+\begin{skillList}
+    \singleItem{Languages:}{JavaScript/TypeScript, Swift, Java, Python, Ruby, Golang}
+    \\
+    \singleItem{Web Development:}{React Native, HTML/CSS, REST APIs, Netlify, Google Cloud Run}
+    \\
+    \singleItem{Technology:}{GraphQL, Bash, Git, Docker, LaTeX, CI/CD}
+\end{skillList}
+
+% A more concise alternate 
+% \begin{skillList}
+%     \doubleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket}%
+%     {Databases:}{SQL, MongoDB, Neo4j, DynamoDB}
+%     \\
+%     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
+%     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
+% \end{skillList}
+\end{document}
