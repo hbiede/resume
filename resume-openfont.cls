@@ -14,7 +14,7 @@
 % page setup 
 \RequirePackage{fancyhdr}
 % Set boundaries
-\RequirePackage[hmargin=1cm, vmargin=0.94cm]{geometry}
+\RequirePackage[hmargin=0.5cm, vmargin=0.7cm]{geometry}
 % remove ugly boxes around links
 \usepackage[hidelinks]{hyperref}
 % setup custom titles
@@ -47,7 +47,7 @@
 \titleformat{\subsection}{%
 \color{subheadings}%
 \customLatoBlack%
-\fontsize{12pt}{12pt}%
+\fontsize{11pt}{11pt}%
 \selectfont%
 \bfseries%
 \uppercase%
@@ -103,7 +103,7 @@
 \color{headings}%
 \raggedright%
 \customRalewayMedium%
-\fontsize{11pt}{13pt}%
+\fontsize{12pt}{13pt}%
 \selectfont{#1}%
 \normalfont}
 
