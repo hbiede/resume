@@ -14,7 +14,7 @@
 % page setup 
 \RequirePackage{fancyhdr}
 % Set boundaries
-\RequirePackage[hmargin=0.5cm, vmargin=0.7cm]{geometry}
+\RequirePackage[hmargin=0.5cm, vmargin=0.5cm]{geometry}
 % remove ugly boxes around links
 \usepackage[hidelinks]{hyperref}
 % setup custom titles
