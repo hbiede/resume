@@ -10,19 +10,35 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      - name: Did PDF Change
+        id: did_change
+        shell: bash
+        run: |
+           if -n "git diff-tree --no-commit-id --name-only HEAD~1 | grep "resume.pdf"; then
+               echo "::set-output name=change::true"
+           else
+               echo "::set-output name=change::false"
+           fi
+
+
       - uses: actions/checkout@v2
+        if: steps.did_change.outputs.change == "false"
 
       - name: Latex Install
+        if: steps.did_change.outputs.change == "false"
         run: sudo apt-get install texlive-xetex && sudo apt-get install texlive
         shell: bash
 
       - name: Compile
+        if: steps.did_change.outputs.change == "false"
         run: xelatex resume.tex
         shell: bash
 
       - name: Git Setup
+        if: steps.did_change.outputs.change == "false"
         run: git config user.name "LaTeX Compiler Action" && git config user.email "github-actions@github.com"
 
       - name: Commit
+        if: steps.did_change.outputs.change == "false"
         run: git add resume.pdf && git commit -m "Update Resume via GitHub Actions" && git push
         shell: bash
