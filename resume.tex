@@ -14,11 +14,11 @@
 \newcommand{\resumeHeadingWithURL}[5]{\runsubsection{\href{#5}{\uppercase{#1}}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
 
 % Create education heading. Parameters: Degree, university, location, when
-\newcommand{\educationHeading}[5]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
-\descript{#2 | GPA: #5}\fakeNewLine}
+\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
+\descript{#2}\fakeNewLine}
 % Create education heading. Parameters: Degree, specialization/minor, university, location, when
-\newcommand{\educationHeadingWithSpecialization}[6]{\runsubsection{#1}\descript{ | #2}\hspace*{\fill}  \location{#4 | #5}\\
-\descript{#3 | GPA: #6}\fakeNewLine}
+\newcommand{\educationHeadingWithSpecialization}[5]{\runsubsection{#1}\descript{ | #2}\hspace*{\fill}  \location{#4 | #5}\\
+\descript{#3}\fakeNewLine}
 
 % Create project heading. Parameters: Name, link, Tech stack
 \newcommand{\projectHeading}[3]{\Project{#1}{#2}
@@ -60,7 +60,8 @@
 % An alternate profile section 
 \alignProfileTable
 \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
-    \ralewayBold{\href{\yourWebsiteLink}{\huge \yourName}} & 
+    \ralewayBold{\href{\yourWebsiteLink}{\huge \yourName}} \\
+    Denver, CO & 
     Email: \href{mailto:\yourEmail}{\yourEmail}
     \\
     \href{https://github.com/\githubUserName}{https://github.com/\githubUserName} & 
@@ -83,11 +84,11 @@
 %--------------------------------------------------------------
 \section{Education}
 % Put school first and degree second if your school is reputable
-\educationHeading{Masters of Science - Computer Science}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}{3.8}
+\educationHeading{Masters of Science - Computer Science}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
 
-\educationHeadingWithSpecialization{Masters of Engineering Management}{Business Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}{3.66}
+\educationHeadingWithSpecialization{Masters of Engineering Management}{Business Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
 
-\educationHeadingWithSpecialization{BSc. Computer Science}{Mathematics Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2021}{3.72}
+\educationHeadingWithSpecialization{BSc. Computer Science}{Mathematics Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2021}
 
 
 % \teacherAssistant{World Wide Web Information Systems Development}
@@ -171,6 +172,15 @@
 %--------------------------------------------------------------
 \section{Projects}
 
+\projectHeading{Mobile Applications}{\yourWebsiteLink/tags/ios}{iOS, Swift, SwiftUI, React Native, Redux, Xcode}
+\begin{bullets}
+    \item Designed 5 utility mobile apps by seeing a need in the
+        market and releasing the solutions to the App Store.
+    \item Developed a wide range of technology stacks to construct
+        these apps: 2 in React Native, 3 in Swift, including SwiftUI.
+\end{bullets}
+\sectionsep
+
 \projectHeading{Open Source Contributions}{https://github.com/\githubUserName}{Git, JavaScript, React Native, PHP}
 \begin{bullets}
     \item Standardized the \href{https://computing.unl.edu}{School of
@@ -181,13 +191,7 @@
         \href{https://github.com/expo/expo/pull/12343}{an Expo
         module} with tens of thousands of weekly downloads.
 \end{bullets}
-
-\projectHeading{Mobile Applications}{\yourWebsiteLink/tags/ios}{iOS, Swift, SwiftUI, React Native, Redux, Xcode}
-\begin{bullets}
-    \item Designed and implemented 5 utility mobile apps.
-    \item Utilized range of technology stacks to construct these apps: 2 in React Native,
-        3 in Swift, 2 of which use SwiftUI.
-\end{bullets}
+\sectionsep
 
 %\projectHeading{What's Next}{https://github.com/hbiede/whats-next}{Swift, SwiftUI, Accessibility, iOS}
 %\begin{bullets}
