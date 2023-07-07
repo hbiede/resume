@@ -8,10 +8,10 @@
 % Convenience command - make it easy to fill template
 
 % Create job position command. Parameters: company, position, location, when
-\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+\newcommand{\resumeHeading}[4]{\runsubsection{#1}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
 
 % Create job position command. Parameters: company, position, location, when, URL
-\newcommand{\resumeHeadingWithURL}[5]{\runsubsection{\href{#5}{\uppercase{#1}}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+\newcommand{\resumeHeadingWithURL}[5]{\runsubsection{\href{#5}{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
 
 % Create education heading. Parameters: Degree, university, location, when
 \newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
@@ -80,22 +80,6 @@
 % \end{center}
 
 %--------------------------------------------------------------
-%     Education
-%--------------------------------------------------------------
-\section{Education}
-% Put school first and degree second if your school is reputable
-\educationHeading{Masters of Science - Computer Science}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
-
-\educationHeadingWithSpecialization{Masters of Engineering Management}{Business Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
-
-\educationHeadingWithSpecialization{BSc. Computer Science}{Mathematics Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2021}
-
-
-% \teacherAssistant{World Wide Web Information Systems Development}
-% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
-\sectionsep
-
-%--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
@@ -105,6 +89,8 @@
         design system to provide a consistent feel during advanced
         user interactions across the suite of four mobile
         applications.
+    \item Enforced Apple's Human Interface Guidelines to meet
+        platform-specific user experience expectations.
     \item Administered thousands of code reviews, proposing
         algorithmic alternatives to improve app performance.
     \item Engineered two app modules in \textbf{React Native} to
@@ -227,6 +213,22 @@
     % \item A full-stack library management system, where users can manage books and holds on their accounts. Users can search the library\textquotesingle{}s catalogue, which has every book mentioned in the Harry Potter series. The system distinguishes between 4 users. For examples, librarians who can also check or return books on behalf of users.\\
 % \end{bullets}
 % \sectionsep
+
+%--------------------------------------------------------------
+%     Education
+%--------------------------------------------------------------
+\section{Education}
+% Put school first and degree second if your school is reputable
+\educationHeading{Masters of Science - Computer Science}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
+
+\educationHeadingWithSpecialization{Masters of Engineering Management}{Business Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2023}
+
+\educationHeadingWithSpecialization{BSc. Computer Science}{Mathematics Minor}{University of Nebraska-Lincoln}{Lincoln, NE}{May 2021}
+
+
+% \teacherAssistant{World Wide Web Information Systems Development}
+% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\sectionsep
   
 
 %------------------
@@ -236,7 +238,7 @@
 \begin{skillList}
     \singleItem{Programming Languages:}{JavaScript/TypeScript, Python, Ruby, Swift, Java, Golang, SQL}
     \\
-    \singleItem{Web Development:}{React Native, HTML/CSS, REST APIs, Netlify, Google Cloud Run}
+    \singleItem{Web Development:}{React/React Native, HTML/CSS, REST APIs, Netlify}
     \\
     \singleItem{Technology:}{GraphQL, Data Structures \& Algorithms, RegEx, Bash, Git, Docker, LaTeX, CI/CD, GitHub Actions, AWS/S3, Machine Learning}
 %    \\
